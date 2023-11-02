@@ -1,0 +1,63 @@
+$btn-border-radius: 0.4rem;
+$btn-padding-large: 1.2rem 3rem;
+$btn-size-large: 1.8rem;
+$btn-padding-medium: 1.2rem 2.6rem;
+$btn-size-medium: 1.6rem;
+$btn-padding-small: 1.2rem 1.8rem;
+$btn-size-small: 1.2rem;
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: $btn-border-radius;
+    padding: $btn-padding-large;
+    font-size: $btn-size-large;
+    background-color: $btn-primary-color;
+    color: #fff;
+    transition: all ease .4s;
+
+    &--primary {
+      background-color: $btn-primary-color;
+     
+    }
+
+    &--secondary {
+      background-color: $btn-secondary-color;
+    }
+
+    &--success {
+      background-color: $btn-success-color;
+    }
+
+    &--danger {
+      background-color: $btn-danger-color;
+    }
+    &--large {
+        padding: $btn-padding-large;
+        font-size: $btn-size-large;
+        line-height: $btn-size-large;
+        border-radius: $btn-border-radius;
+      }
+
+    &--medium {
+      padding: $btn-padding-medium;
+      font-size: $btn-size-medium;
+      border-radius: $btn-border-radius;
+    }
+    &--small {
+      padding: $btn-padding-small;
+      font-size: $btn-size-small;
+      line-height: $btn-size-small;
+      border-radius: $btn-border-radius;
+    }
+
+    &--disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }

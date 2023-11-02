@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+html{
+  font-size: calc(100vw / 1460 * 9.52);
+  @include media('max','lg'){
+    font-size: calc(100vw / 768 * 9.52);
+  }
+  @include media('max','sm'){
+    font-size: calc(100vw / 375 * 9.52);
+  }
+}
+body {
+  background: #202226;
+  text-rendering: optimizeSpeed;
+  font-family: "Roboto", sans-serif; 
+
+    &.popup-opened{
+      overflow-y: hidden;
+    }
+  }
+  
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-position: center;
+    object-fit: cover;
+    image-rendering: auto;
+  }
+a{
+    text-decoration: none;
+    color: black;
+    
+}
+ul,ol{
+list-style: none;
+}
+
+textarea{
+    resize: none;
+}
+
+button,input,textarea{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}

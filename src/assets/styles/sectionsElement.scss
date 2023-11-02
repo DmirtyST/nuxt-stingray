@@ -1,0 +1,59 @@
+.section-title{
+
+&_xl{
+    color: #FFF;
+    font-family: 'Albert Sans Variable', sans-serif;
+    @include font(4.8rem, 4.8rem, '', 600);
+}
+}
+
+.section-text{
+    &_xl{
+        color: #FFF;
+        font-family: 'Barlow', sans-serif;
+        @include font(2.2rem, 3.3rem, '', 400);
+    }
+
+    
+  
+}
+
+@include media('max', 'lg') {
+    .section-title{
+
+        &_xl{
+            @include font(4rem, 4rem, '', 600);
+        }
+        
+    }
+    .section-text{
+        &_xl{
+            color: #FFF;
+            font-family: 'Barlow', sans-serif;
+            @include font(1.8rem, 2.8rem, '', 400);
+        }
+    
+        
+      
+    }
+}
+
+@include media('max', 'sm') {
+    .section-title{
+
+        &_xl{
+            @include font(2.8rem, 3.3rem, '', 600);
+        }
+        
+    }
+    .section-text{
+        &_xl{
+            color: #FFF;
+            font-family: 'Barlow', sans-serif;
+            @include font(1.6rem, 2.3rem, '', 400);
+        }
+    
+        
+      
+    }
+}
