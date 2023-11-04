@@ -258,7 +258,6 @@
         width: 100%;
         left: 0;
         top: 0;
-
         transform: translateY(-100%);
         backdrop-filter: blur(100px);
         background: linear-gradient(
@@ -266,13 +265,11 @@
           var(--token-7bedafc0-807a-4c42-a773-40a398d64ec7, rgb(32, 34, 38)) 0%,
           rgba(30, 32, 36, 0) 100%
         );
-
         visibility: hidden;
-        transition: all ease 0.6s;
+        transition: all ease 0.4s;
         z-index: 8888;
         .header_nav {
           display: block;
-
           opacity: 0;
           transition: all ease 0.4s;
         }
@@ -284,7 +281,7 @@
           @include font(1.8rem, 1.8rem, '', 700);
         }
         &.active {
-          transition: all linear 0.4s;
+          transition: all ease 0.4s;
           transform: translateY(-0%);
           visibility: visible;
           .header_nav {

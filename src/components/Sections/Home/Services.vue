@@ -83,45 +83,7 @@
     const servicesTitle = document.querySelectorAll('.services_title');
     const servicesyRows = document.querySelectorAll('.services_row');
 
-    servicesTitle.forEach((text) => {
-      gsap.fromTo(
-        text,
-        {
-          opacity: 0,
-          yPercent: 40,
-        },
-        {
-          opacity: 1,
-          yPercent: 0,
-          scrollTrigger: {
-            trigger: text,
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: 3,
-          },
-        },
-      );
-    });
-    servicesyRows.forEach((text) => {
-      gsap.fromTo(
-        text,
-        {
-          opacity: 0,
-        },
-        {
-          opacity: 1,
-          scale: 1,
-
-          scrollTrigger: {
-            trigger: text,
-            start: 'top 80%',
-            end: 'top 10%',
-            scrub: 4,
-          },
-        },
-      );
-    });
-    mm.add('(max-width: 1024px)', () => {
+    mm.add('(min-width: 992px)', () => {
       servicesTitle.forEach((text) => {
         gsap.fromTo(
           text,
@@ -134,9 +96,9 @@
             yPercent: 0,
             scrollTrigger: {
               trigger: text,
-              start: '25% bottom',
+              start: 'top bottom',
               end: 'bottom top',
-              scrub: 1,
+              scrub: 3,
             },
           },
         );
@@ -153,9 +115,47 @@
 
             scrollTrigger: {
               trigger: text,
+              start: 'top 80%',
+              end: 'top 10%',
+              scrub: 4,
+            },
+          },
+        );
+      });
+    });
+    mm.add('(max-width: 992px)', () => {
+      servicesTitle.forEach((text) => {
+        gsap.fromTo(
+          text,
+          {
+            opacity: 0,
+          },
+          {
+            opacity: 1,
+
+            scrollTrigger: {
+              trigger: text,
               start: '25% bottom',
               end: 'bottom top',
-              scrub: 1,
+              scrub: 2,
+            },
+          },
+        );
+      });
+      servicesyRows.forEach((text) => {
+        gsap.fromTo(
+          text,
+          {
+            opacity: 0,
+          },
+          {
+            opacity: 1,
+
+            scrollTrigger: {
+              trigger: text,
+              start: '25% bottom',
+              end: 'bottom top',
+              scrub: 2,
             },
           },
         );

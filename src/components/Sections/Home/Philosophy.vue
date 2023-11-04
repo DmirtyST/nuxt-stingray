@@ -69,7 +69,7 @@
     </UiContainer>
     <div class="philosophy_footer-img">
       <div class="philosophy_footer-item">
-        <nuxt-img src="philosophy.png" />
+        <nuxt-img  src="philosophy.png" />
       </div>
     </div>
   </section>
@@ -93,7 +93,7 @@
         contactSection.scrollIntoView({behavior: 'smooth'});
       }
     });
-    mm.add('(min-width: 1024px)', () => {
+    mm.add('(min-width: 992px)', () => {
       philosophyTexts.forEach((text) => {
         gsap.fromTo(
           text,
@@ -174,22 +174,22 @@
         );
       });
     });
-    mm.add('(max-width: 1024px)', () => {
+    mm.add('(max-width: 992px)', () => {
       philosophyTexts.forEach((text) => {
         gsap.fromTo(
           text,
           {
             opacity: 0,
-            yPercent: 40,
+            
           },
           {
             opacity: 1,
-            yPercent: 0,
+           
             scrollTrigger: {
               trigger: text,
               start: '25% bottom',
               end: 'bottom top',
-              scrub: 1,
+              scrub: 2,
             },
           },
         );
@@ -200,16 +200,16 @@
           img,
           {
             opacity: 0,
-            scale: 0.9,
+           
           },
           {
             opacity: 1,
-            scale: 1,
+           
             scrollTrigger: {
               trigger: img,
               start: '25% bottom',
               end: 'bottom top',
-              scrub: 1,
+              scrub: 2,
             },
           },
         );
@@ -220,16 +220,16 @@
           title,
           {
             opacity: 0,
-            yPercent: 40,
+           
           },
           {
-            yPercent: 0,
+         
             opacity: 1,
             scrollTrigger: {
               trigger: title,
               start: '25% bottom',
               end: 'bottom top',
-              scrub: 1,
+              scrub: 2,
             },
           },
         );
@@ -239,17 +239,17 @@
         gsap.fromTo(
           btn,
           {
-            yPercent: 50,
+          
             opacity: 0,
           },
           {
-            yPercent: 0,
+           
             opacity: 1,
             scrollTrigger: {
               trigger: btn,
               start: '25% bottom',
               end: 'bottom top',
-              scrub: 1,
+              scrub: 2,
             },
           },
         );

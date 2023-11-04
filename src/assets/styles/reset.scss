@@ -7,13 +7,46 @@
   scroll-behavior: smooth;
 }
 html{
-  font-size: calc(100vw / 1460 * 9.52);
-  @include media('max','lg'){
-    font-size: calc(100vw / 768 * 9.52);
+  font-size: 10px; 
+
+  // Указываем размер шрифта для каждой точки останова
+  @include media('max', 'lg') {
+    // Для lg точки останова: 1024px
+    font-size: calc(100vw / 992 * 10);
   }
-  @include media('max','sm'){
-    font-size: calc(100vw / 375 * 9.52);
+
+  @include media('max', 'md') {
+    // Для md точки останова: 768px
+    font-size: calc(100vw / 768 * 10);
   }
+
+  @include media('max', 'sm') {
+    font-size: 10px;
+  }
+
+ 
+}
+html{
+  
+
+  font-size: calc(100vw / 1460 * 10);
+
+  @include media('max', 'lg') {
+    // Для lg точки останова: 1024px
+    font-size: calc(100vw / 992 * 10);
+  }
+
+  @include media('max', 'md') {
+    // Для md точки останова: 768px
+    font-size: calc(100vw / 768 * 10);
+  }
+
+  @include media('max', 'sm') {
+    // Для sm точки останова: 640px
+    font-size: calc(100vw / 576 * 10);
+  }
+
+  
 }
 body {
   background: #202226;

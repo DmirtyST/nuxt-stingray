@@ -67,45 +67,86 @@
   onMounted(() => {
     const philosophyTitle = document.querySelectorAll('.contacts_title');
     const philosophyRows = document.querySelectorAll('.contacts_row');
+    let mm = gsap.matchMedia();
 
-    philosophyTitle.forEach((text) => {
-      gsap.fromTo(
-        text,
-        {
-          opacity: 0,
-          yPercent: 30,
-        },
-        {
-          yPercent: 0,
-          opacity: 1,
-
-          scrollTrigger: {
-            trigger: text,
-            start: 'top bottom',
-            end: 'top 60%',
-            scrub: 3,
+    mm.add('(min-width: 992px)', () => {
+      philosophyTitle.forEach((text) => {
+        gsap.fromTo(
+          text,
+          {
+            opacity: 0,
+            yPercent: 30,
           },
-        },
-      );
+          {
+            yPercent: 0,
+            opacity: 1,
+
+            scrollTrigger: {
+              trigger: text,
+              start: 'top bottom',
+              end: 'top 60%',
+              scrub: 3,
+            },
+          },
+        );
+      });
+      philosophyRows.forEach((img) => {
+        gsap.fromTo(
+          img,
+          {
+            opacity: 0,
+            scale: 0.9,
+          },
+          {
+            opacity: 1,
+            scale: 1,
+            scrollTrigger: {
+              trigger: img,
+              start: 'top bottom',
+              end: 'top 30%',
+              scrub: 4,
+            },
+          },
+        );
+      });
     });
-    philosophyRows.forEach((img) => {
-      gsap.fromTo(
-        img,
-        {
-          opacity: 0,
-          scale: 0.9,
-        },
-        {
-          opacity: 1,
-          scale: 1,
-          scrollTrigger: {
-            trigger: img,
-            start: 'top bottom',
-            end: 'top 30%',
-            scrub: 4,
+    mm.add('(max-width: 992px)', () => {
+      philosophyTitle.forEach((text) => {
+        gsap.fromTo(
+          text,
+          {
+            opacity: 0,
           },
-        },
-      );
+          {
+            opacity: 1,
+
+            scrollTrigger: {
+              trigger: text,
+              start: '25% bottom',
+              end: 'bottom top',
+              scrub: 2,
+            },
+          },
+        );
+      });
+      philosophyRows.forEach((img) => {
+        gsap.fromTo(
+          img,
+          {
+            opacity: 0,
+          },
+          {
+            opacity: 1,
+
+            scrollTrigger: {
+              trigger: img,
+              start: '25% bottom',
+              end: 'bottom top',
+              scrub: 2,
+            },
+          },
+        );
+      });
     });
   });
 </script>

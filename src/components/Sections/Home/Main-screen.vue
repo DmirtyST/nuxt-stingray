@@ -48,7 +48,7 @@
     let mm = gsap.matchMedia();
     // Анимация для .main-screen_images
 
-    mm.add('(min-width: 1024px)', () => {
+    mm.add('(min-width: 992px)', () => {
       gsap.to(imagesElement, {
         x: '-100%',
         scrollTrigger: {
@@ -75,7 +75,7 @@
       );
     });
 
-    mm.add('(max-width: 1024px)', () => {
+    mm.add('(max-width: 992px)', () => {
       gsap.to(imagesElement, {
         y: '-220%',
         scrollTrigger: {
@@ -90,6 +90,22 @@
         {yPercent: '100vh', opacity: 0}, // начальные значения
         {
           yPercent: 0,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: '.main-screen',
+            start: '15% top',
+            end: 'bottom center',
+            scrub: 0.1,
+          },
+        },
+      );
+    });
+    mm.add('(max-width: 576px)', () => {
+      gsap.fromTo(
+        aboutElement,
+        {yPercent: '100vh', opacity: 0}, // начальные значения
+        {
+          yPercent: '30vh',
           opacity: 1,
           scrollTrigger: {
             trigger: '.main-screen',

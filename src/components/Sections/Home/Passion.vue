@@ -122,7 +122,7 @@
     const philosophyStats = document.querySelectorAll('.passion_stats-item');
     const philosophyCard = document.querySelectorAll('.passion_card');
     let mm = gsap.matchMedia();
-    mm.add('(min-width: 1024px)', () => {
+    mm.add('(min-width: 992px)', () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: '.passion_titles', // Вы можете заменить это на нужный вам триггер
@@ -230,7 +230,7 @@
         );
       });
     });
-    mm.add('(max-width: 1024px)', () => {
+    mm.add('(max-width: 992px)', () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: '.passion_titles', // Вы можете заменить это на нужный вам триггер
@@ -249,12 +249,12 @@
           element,
           {
             opacity: 0,
-            yPercent: isSub ? 60 : 40,
+            
           },
           {
-            yPercent: 0,
+           
             opacity: 1,
-            duration: 0.5, // Продолжительность анимации, можете настроить под себя
+            duration: 0.7, 
           },
         );
       });
@@ -263,16 +263,16 @@
           text,
           {
             opacity: 0,
-            yPercent: 40,
+            yPercent: 0,
           },
           {
             opacity: 1,
-            yPercent: 0,
+          
             scrollTrigger: {
               trigger: text,
               start: '25% bottom',
               end: 'bottom top',
-              scrub: 1,
+              scrub: 2,
             },
           },
         );
@@ -282,17 +282,17 @@
           text,
           {
             opacity: 0,
-            scale: 0.9,
+         
           },
           {
-            scale: 1,
+          
             opacity: 1,
 
             scrollTrigger: {
               trigger: text,
               start: '25% bottom',
               end: 'bottom top',
-              scrub: 1,
+              scrub: 2,
             },
           },
         );
@@ -310,7 +310,7 @@
               trigger: text,
               start: '25% bottom',
               end: 'bottom top',
-              scrub: 1,
+              scrub: 2,
             },
           },
         );
@@ -320,16 +320,15 @@
           img,
           {
             opacity: 0,
-            scale: 0.9,
+           
           },
           {
             opacity: 1,
-            scale: 1,
             scrollTrigger: {
               trigger: img,
               start: '25% bottom',
               end: 'bottom top',
-              scrub: 1,
+              scrub: 2,
             },
           },
         );

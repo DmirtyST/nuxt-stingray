@@ -72,7 +72,7 @@
 
   @include media('max', 'sm') {
     .about {
-      top: 0rem;
+      top: 70rem;
       width: 100%;
       z-index: 2;
       height: 100vh;
@@ -83,7 +83,7 @@
       }
       &_text {
         padding: 0 1.6rem;
-        padding-top: 20rem;
+        padding-top: 0rem;
         width: 100%;
       }
       &_title {
