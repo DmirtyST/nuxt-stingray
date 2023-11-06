@@ -35,7 +35,7 @@
       color: white;
       @include flex(column, center, center);
       text-align: center;
-      padding: 0;
+      padding: 0 1.5rem;
     }
 
     &_text {
@@ -75,7 +75,12 @@
       top: 70rem;
       width: 100%;
       z-index: 2;
-      height: 100vh;
+      height: 50vh;
+
+      &_text-box {
+        @include flex(column, flex-start, flex-start);
+      }
+
       position: sticky;
       &_heading {
         @include font(1.4rem, 1.6rem, '', 600);
@@ -87,7 +92,7 @@
         width: 100%;
       }
       &_title {
-        @include font(2.2rem, 3rem, '', 600);
+        @include font(3.2rem, 3.7rem, '', 600);
       }
     }
   }

@@ -195,17 +195,17 @@
           {
             opacity: 0,
 
-            scale: 0.9,
+            scaleY: 0.9,
           },
           {
             opacity: 1,
 
-            scale: 1,
+            scaleY: 1,
             scrollTrigger: {
               trigger: text,
               start: 'top bottom',
               end: 'top 60%',
-              scrub: 3,
+              scrub: 2,
             },
           },
         );
@@ -215,11 +215,11 @@
           img,
           {
             opacity: 0,
-            scale: 0.9,
+            scaleY: 0.9,
           },
           {
             opacity: 1,
-            scale: 1,
+            scaleY: 1,
             scrollTrigger: {
               trigger: img,
               start: 'top bottom',
@@ -249,12 +249,10 @@
           element,
           {
             opacity: 0,
-            
           },
           {
-           
             opacity: 1,
-            duration: 0.7, 
+            duration: 0.7,
           },
         );
       });
@@ -267,7 +265,7 @@
           },
           {
             opacity: 1,
-          
+
             scrollTrigger: {
               trigger: text,
               start: '25% bottom',
@@ -282,10 +280,8 @@
           text,
           {
             opacity: 0,
-         
           },
           {
-          
             opacity: 1,
 
             scrollTrigger: {
@@ -320,7 +316,6 @@
           img,
           {
             opacity: 0,
-           
           },
           {
             opacity: 1,
@@ -345,6 +340,7 @@
   .passion_stats-item {
     opacity: 0;
   }
+
   .passion {
     min-height: 100vh;
     padding-top: 10rem;

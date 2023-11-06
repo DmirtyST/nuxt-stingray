@@ -50,12 +50,12 @@
 
     mm.add('(min-width: 992px)', () => {
       gsap.to(imagesElement, {
-        x: '-100%',
+        x: '-150%',
         scrollTrigger: {
           trigger: imagesElement,
-          scrub: 0.3,
+          scrub: 0.1,
           start: 'top top',
-          end: () => `+=${window.innerHeight * 3}`,
+          end: () => `+=${window.innerHeight * 2.5}`,
         },
       });
       gsap.fromTo(
@@ -67,7 +67,7 @@
 
           scrollTrigger: {
             trigger: '.main-screen',
-            start: '15% top',
+            start: '20% top', // начать анимацию позже
             end: 'bottom center',
             scrub: 0.1,
           },
@@ -101,17 +101,26 @@
       );
     });
     mm.add('(max-width: 576px)', () => {
+      gsap.to(imagesElement, {
+        y: '-220%',
+        scrollTrigger: {
+          trigger: '.main-screen',
+          scrub: 1,
+          start: 'top top',
+          end: () => `+=${window.innerHeight * 3}`,
+        },
+      });
       gsap.fromTo(
         aboutElement,
-        {yPercent: '100vh', opacity: 0}, // начальные значения
+        {opacity: 0}, // начальные значения
         {
-          yPercent: '30vh',
           opacity: 1,
+
           scrollTrigger: {
             trigger: '.main-screen',
-            start: '15% top',
+            start: '35% top',
             end: 'bottom center',
-            scrub: 0.1,
+            scrub: 1,
           },
         },
       );
@@ -140,8 +149,9 @@
       position: absolute;
     }
     &_title {
-      @include font(9.6rem, 9.6rem, '', 600);
+      @include font(9.6rem, 9.6rem, -0.3rem, 600);
       margin-bottom: 2rem;
+      font-family: 'Albert Sans Variable';
     }
     &_images-container {
       @include flex(row);
@@ -152,8 +162,8 @@
     }
     &_image {
       height: 100%;
-      min-width: 106rem;
-      width: 100rem;
+      min-width: 102em;
+      width: 102rem;
       overflow: hidden;
       position: relative;
       @include flex(column, flex-end, flex-start);
@@ -238,7 +248,7 @@
         height: 120vh;
       }
       &_image {
-        height: 60%;
+        height: 46%;
         padding-bottom: 1.6rem;
         padding-top: 0rem;
         &:first-child {

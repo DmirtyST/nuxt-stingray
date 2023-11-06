@@ -95,11 +95,11 @@
           img,
           {
             opacity: 0,
-            scale: 0.9,
+            scaleY: 0.9,
           },
           {
             opacity: 1,
-            scale: 1,
+            scaleY: 1,
             scrollTrigger: {
               trigger: img,
               start: 'top bottom',

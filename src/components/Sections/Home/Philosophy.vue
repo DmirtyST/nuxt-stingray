@@ -69,7 +69,7 @@
     </UiContainer>
     <div class="philosophy_footer-img">
       <div class="philosophy_footer-item">
-        <nuxt-img  src="philosophy.png" />
+        <nuxt-img src="philosophy.png" />
       </div>
     </div>
   </section>
@@ -119,11 +119,11 @@
           img,
           {
             opacity: 0,
-            scale: 0.9,
+            scaleY: 0.9,
           },
           {
             opacity: 1,
-            scale: 1,
+            scaleY: 1,
             scrollTrigger: {
               trigger: img,
               start: 'top bottom',
@@ -180,11 +180,9 @@
           text,
           {
             opacity: 0,
-            
           },
           {
             opacity: 1,
-           
             scrollTrigger: {
               trigger: text,
               start: '25% bottom',
@@ -200,11 +198,10 @@
           img,
           {
             opacity: 0,
-           
           },
           {
             opacity: 1,
-           
+
             scrollTrigger: {
               trigger: img,
               start: '25% bottom',
@@ -220,10 +217,8 @@
           title,
           {
             opacity: 0,
-           
           },
           {
-         
             opacity: 1,
             scrollTrigger: {
               trigger: title,
@@ -239,11 +234,9 @@
         gsap.fromTo(
           btn,
           {
-          
             opacity: 0,
           },
           {
-           
             opacity: 1,
             scrollTrigger: {
               trigger: btn,
