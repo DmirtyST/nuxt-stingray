@@ -28,6 +28,9 @@
         </div>
         <div class="services_accordions-images">
           <nuxt-img
+            alt="servicesTab-img"
+            provider="cloudinary"
+            format="webp"
             v-for="(image, index) in servicesImages"
             :key="index"
             :src="image"
@@ -72,12 +75,7 @@
         'From traditional clay models to scale models, prototypes and show cars. Whatever the project needs, we are  ready.',
     },
   ];
-  const servicesImages = [
-    'https://framerusercontent.com/images/cJ95gb50IOvkxw8bSSYp8aayM.webp',
-    'https://framerusercontent.com/images/yONNP2mp8aTlNQERFIFPRrAvVI.webp',
-    'https://framerusercontent.com/images/xvM7jDqPtJPxq7ZHcOu7TOv3lc.webp',
-    'https://framerusercontent.com/images/XHOqQH7us8p39NuKLAWxQDYIHk.webp',
-  ];
+  const servicesImages = ['service-tab1', 'service-tab2', 'service-tab3', 'service-tab4'];
 
   onMounted(() => {
     const servicesTitle = document.querySelectorAll('.services_title');

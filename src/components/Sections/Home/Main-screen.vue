@@ -4,7 +4,9 @@
       <div class="main-screen_images-container">
         <div class="main-screen_image">
           <nuxt-img
-            src="https://framerusercontent.com/images/k2qoMslGJ0XO5dfY9XZbGFRm2Q.webp"
+            alt="slide-home"
+            src="main-screen1"
+            provider="cloudinary"
             format="webp"
           />
           <div class="main-screen_text-box">
@@ -15,19 +17,25 @@
 
         <div class="main-screen_image">
           <nuxt-img
-            src="https://framerusercontent.com/images/FMvauGoRPgULZVShpN7I6iunfgA.webp"
+            alt="slide-home"
+            provider="cloudinary"
+            src="main-screen2"
             format="webp"
           />
         </div>
         <div class="main-screen_image">
           <nuxt-img
-            src="https://framerusercontent.com/images/qqm93bv18kXqgPAM8j2HlgWwHwc.png"
+            alt="slide-home"
+            provider="cloudinary"
+            src="main-screen3"
             format="webp"
           />
         </div>
         <div class="main-screen_image">
           <nuxt-img
-            src="https://framerusercontent.com/images/k2qoMslGJ0XO5dfY9XZbGFRm2Q.webp"
+            alt="slide-home"
+            provider="cloudinary"
+            src="main-screen1"
             format="webp"
           />
         </div>
@@ -158,6 +166,7 @@
       gap: 3.2rem;
       height: 100%;
       width: 100%;
+      margin: 0 auto;
       overflow: hidden;
     }
     &_image {

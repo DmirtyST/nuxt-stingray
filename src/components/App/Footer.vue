@@ -1,9 +1,7 @@
 <template>
   <div class="footer">
     <div class="footer_image">
-      <nuxt-img
-        src="https://framerusercontent.com/images/hxLV86t6dbLOy8y8BpHJoDPza0.webp"
-      />
+      <nuxt-img alt="footerBg" provider="cloudinary" src="footer" />
     </div>
   </div>
 </template>

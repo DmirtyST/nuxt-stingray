@@ -2,10 +2,7 @@
   <div class="header">
     <div class="header_row">
       <div @click="scrollToTop" class="header_logo">
-        <nuxt-img
-          format="webp"
-          src="https://framerusercontent.com/images/WFrmt9q7h36nSYj2qLabIEg2cA.svg"
-        />
+        <nuxt-img format="webp" src="logo" provider="cloudinary" alt="logo" />
       </div>
 
       <nav class="header_nav">
@@ -187,8 +184,8 @@
       padding-bottom: 2rem;
     }
     &_logo {
-      width: 18rem;
-      height: 1.9rem;
+      width: 20rem;
+      height: 2rem;
       position: relative;
       z-index: 9999;
       img {

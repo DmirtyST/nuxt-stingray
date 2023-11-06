@@ -8,7 +8,11 @@
         <div class="contacts_item">
           <div class="contacts_item-profile">
             <nuxt-img
-              src="https://framerusercontent.com/images/arrTZ6Og22T7mdW4y7NgDSuwXA.png"
+              alt="contacts-profile"
+              provider="cloudinary"
+              format="webp"
+              loading="lazy"
+              src="contactsProfile"
             />
           </div>
           <div class="contacts_item-title">Your personal support at any time</div>

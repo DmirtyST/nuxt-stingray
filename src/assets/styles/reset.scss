@@ -12,16 +12,17 @@ html{
   @include media('min','xxl'){
     font-size: 10px; 
   }
+  @include media('min','xlr'){
+    font-size: calc(100vw / 1920 * 10);
+  }
   @include media ('max','xxl'){
     font-size: calc(100vw / 1400 * 10);
   }
   @include media('max', 'lg') {
-    // Для lg точки останова: 1024px
     font-size: calc(100vw / 992 * 10);
   }
 
   @include media('max', 'md') {
-    // Для md точки останова: 768px
     font-size: calc(100vw / 768 * 10);
   }
 

@@ -12,8 +12,11 @@
       <div class="passion_main-box"></div>
       <div class="passion_image main animate-image">
         <nuxt-img
-          src="https://framerusercontent.com/images/BRRHtrcfrtIsfLgEdZdG1SPE1g.webp"
+          alt="passion-img"
+          provider="cloudinary"
+          src="passion1"
           format="webp"
+          loading="lazy"
         />
       </div>
       <div class="passion_row">
@@ -23,7 +26,10 @@
               <div class="passion_card-profile">
                 <div class="passion_image sub-profile">
                   <nuxt-img
-                    src="https://framerusercontent.com/images/mFCImjTs377UOvcsiEGeptv8OzQ.png"
+                    alt="passionProfile"
+                    provider="cloudinary"
+                    src="passionProfile"
+                    loading="lazy"
                     format="webp"
                   />
                 </div>
@@ -43,7 +49,10 @@
           <div class="passion_box-top">
             <div class="passion_image sub-left animate-image">
               <nuxt-img
-                src="https://framerusercontent.com/images/qJRVGAioDZ5rVA8rFbOZy65BM.webp"
+                alt="passion-img"
+                provider="cloudinary"
+                src="passion3"
+                loading="lazy"
                 format="webp"
               />
             </div>
@@ -54,7 +63,10 @@
             <div class="passion_card-profile">
               <div class="passion_image sub-profile">
                 <nuxt-img
-                  src="https://framerusercontent.com/images/mFCImjTs377UOvcsiEGeptv8OzQ.png"
+                  alt="passionProfile"
+                  provider="cloudinary"
+                  src="passionProfile"
+                  loading="lazy"
                   format="webp"
                 />
               </div>
@@ -66,7 +78,13 @@
           </div>
 
           <div class="passion_image sub-right">
-            <nuxt-img src="passion-right.png" format="webp" />
+            <nuxt-img
+              alt="passion-img"
+              provider="cloudinary"
+              src="passion2"
+              loading="lazy"
+              format="webp"
+            />
           </div>
         </div>
       </div>

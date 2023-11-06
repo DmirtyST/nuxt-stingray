@@ -9,18 +9,24 @@
             </div>
             <div class="philosophy_img">
               <nuxt-img
+                alt="philosophy-img"
+                provider="cloudinary"
                 class="philosophy_img-img"
-                src="https://framerusercontent.com/images/EQkOpaxm5lLntANsW4577dstfc.webp"
+                src="phylosophy1"
                 format="webp"
+                loading="lazy"
               />
             </div>
           </div>
           <div class="philosophy_item">
             <div class="philosophy_img">
               <nuxt-img
+                alt="philosophy-img"
+                provider="cloudinary"
                 class="philosophy_img-img"
-                src="https://framerusercontent.com/images/0FnvTW8VE3hvXmml6nSmUk2mNQ8.webp"
+                src="phylosophy2"
                 format="webp"
+                loading="lazy"
               />
             </div>
             <div class="philosophy_text section-text_xl">
@@ -38,9 +44,12 @@
             </div>
             <div class="philosophy_img">
               <nuxt-img
+                alt="philosophy-img"
+                provider="cloudinary"
                 class="philosophy_img-img"
-                src="https://framerusercontent.com/images/d4rbrUQapiLG0FGk9NOxTeyI.webp"
+                src="phylosophy3"
                 format="webp"
+                loading="lazy"
               />
             </div>
           </div>
@@ -58,9 +67,12 @@
           <div class="philosophy_item">
             <div class="philosophy_img">
               <nuxt-img
+                alt="philosophy-img"
+                provider="cloudinary"
                 class="philosophy_img-img"
-                src="https://framerusercontent.com/images/qkAJoqzbUFjQ2X0snah5olqO0.webp"
+                src="phylosophy4"
                 format="webp"
+                loading="lazy"
               />
             </div>
           </div>
@@ -69,7 +81,7 @@
     </UiContainer>
     <div class="philosophy_footer-img">
       <div class="philosophy_footer-item">
-        <nuxt-img src="philosophy.png" />
+        <nuxt-img provider="cloudinary" loading="lazy" src="phylosophyFooters" />
       </div>
     </div>
   </section>
