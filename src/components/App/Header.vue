@@ -62,8 +62,13 @@
   };
   const rootMargin = ref('0% 0% 0% 0%');
   function setRootMargin() {
+    const aboutSection = document.querySelector('#about');
     if (window.innerWidth < 640) {
-      rootMargin.value = '-60% 0px -40% 0px';
+      if (aboutSection) {
+        rootMargin.value = '-50% 0px -45% 0px';
+      } else {
+        rootMargin.value = '-60% 0px -45% 0px';
+      }
     } else {
       // Установите любые другие значения для более широких экранов
       rootMargin.value = '-50% 0px -40% 0px';

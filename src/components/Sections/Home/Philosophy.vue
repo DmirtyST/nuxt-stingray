@@ -374,6 +374,7 @@
       cursor: pointer;
       position: relative;
       padding: 1.2rem 0;
+      z-index: 1;
       background: linear-gradient(
         90deg,
         rgba(42, 45, 50, 0) 0%,
@@ -395,6 +396,7 @@
           opacity: 0.6;
           transition: all ease 1s;
           height: 0.04rem;
+          z-index: -1;
         }
       }
       &::before,
@@ -546,7 +548,7 @@
       }
       &_footer-img {
         width: 100%;
-        height: 30rem;
+        height: 28rem;
         position: relative;
         &::after {
           content: '';

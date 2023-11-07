@@ -110,25 +110,25 @@
     });
     mm.add('(max-width: 576px)', () => {
       gsap.to(imagesElement, {
-        y: '-220%',
+        y: '-250%',
         scrollTrigger: {
           trigger: '.main-screen',
-          scrub: 1,
+          scrub: 0.4,
           start: 'top top',
           end: () => `+=${window.innerHeight * 3}`,
         },
       });
       gsap.fromTo(
         aboutElement,
-        {opacity: 0}, // начальные значения
+        {yPercent: '100vh', opacity: 0}, // начальные значения
         {
+          yPercent: '0vh',
           opacity: 1,
-
           scrollTrigger: {
             trigger: '.main-screen',
-            start: '35% top',
+            start: '15% top',
             end: 'bottom center',
-            scrub: 1,
+            scrub: 0.1,
           },
         },
       );
@@ -239,6 +239,22 @@
   }
   @include media('max', 'sm') {
     .main-screen {
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 50rem;
+        width: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba(21, 22, 25, 0) 0%,
+          rgba(21, 22, 25, 0.5) 37.42609797297297%,
+          var(--token-112e39a7-c39e-403d-ae93-7e62c714a3f9, rgb(21, 22, 25)) 100%
+        );
+        z-index: 1;
+      }
+      height: 240vh;
       &_text-box {
         left: 1.5rem;
         bottom: 4rem;
@@ -254,10 +270,10 @@
       &_row {
         position: sticky;
         top: 0;
-        height: 120vh;
+        height: 70vh;
       }
       &_image {
-        height: 46%;
+        height: 56rem;
         padding-bottom: 1.6rem;
         padding-top: 0rem;
         &:first-child {

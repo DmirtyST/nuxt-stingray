@@ -72,16 +72,20 @@
 
   @include media('max', 'sm') {
     .about {
-      top: 70rem;
+      top: 180rem;
       width: 100%;
       z-index: 2;
       height: 50vh;
+      position: absolute;
+
+      opacity: 0;
+      z-index: 20;
 
       &_text-box {
-        @include flex(column, flex-start, flex-start);
+        @include flex(column, flex-end, center);
+        background: none;
       }
 
-      position: sticky;
       &_heading {
         @include font(1.4rem, 1.6rem, '', 600);
         margin-bottom: 1rem;
