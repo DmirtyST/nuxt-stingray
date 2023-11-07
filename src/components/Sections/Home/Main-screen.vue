@@ -110,7 +110,7 @@
     });
     mm.add('(max-width: 576px)', () => {
       gsap.to(imagesElement, {
-        y: '-250%',
+        y: '-200%',
         scrollTrigger: {
           trigger: '.main-screen',
           scrub: 0.4,
@@ -270,7 +270,7 @@
       &_row {
         position: sticky;
         top: 0;
-        height: 70vh;
+        height: 120vh;
       }
       &_image {
         height: 56rem;

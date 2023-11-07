@@ -72,7 +72,7 @@
 
   @include media('max', 'sm') {
     .about {
-      top: 180rem;
+      top: 130rem;
       width: 100%;
       z-index: 2;
       height: 50vh;
