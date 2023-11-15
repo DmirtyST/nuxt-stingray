@@ -36,7 +36,7 @@
   }
   @include media('max', 'sm') {
     .footer {
-      height: 25rem;
+      height: 28rem;
     }
   }
 </style>
